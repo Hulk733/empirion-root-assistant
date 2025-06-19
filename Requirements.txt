@@ -1,0 +1,9 @@
+openai
+google-api-python-client
+SpeechRecognition
+pyttsx3
+gTTS
+pyaudio
+pillow
+requests
+beautifulsoup4
