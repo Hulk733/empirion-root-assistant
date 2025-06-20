@@ -175,8 +175,9 @@ class WebSocketServer:
                 'timestamp': datetime.now().isoformat()
             })
     
-    async def client_handler(self, websocket: websockets.WebSocketServerProtocol, path: str):
+    async def client_handler(self, websocket: websockets.WebSocketServerProtocol):
         """Handle a client connection"""
+        path = "/"  # Default path since newer websockets doesn't pass it
         client_id = await self.register_client(websocket, path)
         
         try:
