@@ -1,0 +1,57 @@
+{
+    "openai_api_key": "your-openai-api-key",
+    "websocket": {
+        "host": "0.0.0.0",
+        "port": 8765,
+        "max_connections": 100,
+        "heartbeat_interval": 30
+    },
+    "voice": {
+        "enabled": true,
+        "language": "en-US",
+        "wake_word": "hey empirion",
+        "speech_rate": 150,
+        "volume": 0.9
+    },
+    "phone": {
+        "enabled": true,
+        "default_country_code": "+1",
+        "sms_limit_per_day": 100,
+        "call_recording": false
+    },
+    "samsung_store": {
+        "enabled": true,
+        "api_url": "https://galaxystore.samsung.com/api",
+        "cache_ttl": 3600
+    },
+    "ai": {
+        "model": "gpt-4",
+        "temperature": 0.7,
+        "max_tokens": 1000,
+        "context_window": 10
+    },
+    "security": {
+        "require_auth": true,
+        "token_expiry": 86400,
+        "allowed_origins": ["http://localhost:*", "https://*.empirion-assistant.com"]
+    },
+    "features": {
+        "notifications": true,
+        "reminders": true,
+        "calendar_integration": true,
+        "smart_home": false,
+        "health_tracking": false
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/assistant.log",
+        "max_size": "10MB",
+        "backup_count": 5
+    },
+    "redis": {
+        "enabled": false,
+        "host": "localhost",
+        "port": 6379,
+        "db": 0
+    }
+}
